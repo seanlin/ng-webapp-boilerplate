@@ -1,0 +1,21 @@
+{
+  "name": "ng-webapp-boilerplate",
+  "version": "0.0.1",
+  "description": "AngularJS web application boilerplate with Gulp, LESS, Bower, Bootstrap and Jade",
+  "authors": [
+    "Sean Lin"
+  ],
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/seanlin/ng-webapp-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
