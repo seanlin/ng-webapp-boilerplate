@@ -1,7 +1,8 @@
 
 
 angular.module('myApp', [
-	'myApp.controllers',
 	'myApp.directives',
-	'myApp.services'
+	'myApp.services',
+	'myApp.filters',
+	'myApp.controllers'
 ]);
