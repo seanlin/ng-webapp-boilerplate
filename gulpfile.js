@@ -4,6 +4,7 @@ var gulp    = require('gulp'),
     concat  = require('gulp-concat'),
     rename  = require('gulp-rename'),
     jshint  = require('gulp-jshint'),
+    ngmin   = require('gulp-ngmin'),
     uglify  = require('gulp-uglify'),
     less    = require('gulp-less'),
     csso    = require('gulp-csso'),
@@ -33,9 +34,15 @@ gulp.task('scripts', function () {
         // Concatenate, minify and copy all JavaScript (except vendor scripts)
         gulp.src(['src/js/**/*.js'])
             .pipe(concat('main.js'))
+            .pipe(ngmin({dynamic:true}))
             .pipe(uglify({mangle: false}))
             .pipe(gulp.dest('app/js'))
-            .pipe(refresh(lr))
+            .pipe(refresh(lr)),
+
+        // Copy vendor scripts
+        gulp.src(['bower_components/angular-bootstrap/ui-bootstrap.js'])
+            .pipe(uglify())
+            .pipe(gulp.dest('app/js/vendor/'))
     );
 });
 

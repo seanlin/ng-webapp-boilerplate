@@ -6,7 +6,6 @@
     "Sean Lin"
   ],
   "license": "MIT",
-  "private": true,
   "homepage": "https://github.com/seanlin/ng-webapp-boilerplate",
   "ignore": [
     "**/.*",
@@ -16,6 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.1.1"
-  }
+    "angular-mocks": "^1.2.16",
+    "angular-bootstrap": "^0.11.0",
+    "angular": "^1.2.16"
+  },
+  "private": true
 }

@@ -21,7 +21,9 @@
     "gulp-util": "^2.2.14",
     "http": "^0.0.0",
     "jshint-stylish": "^0.2.0",
-    "tiny-lr": "^0.0.7"
+    "tiny-lr": "^0.0.7",
+    "gulp-changed": "^0.3.0",
+    "gulp-ngmin": "^0.3.0",
   },
   "repository": {
     "type": "git",
