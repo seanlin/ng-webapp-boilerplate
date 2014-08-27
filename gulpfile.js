@@ -1,10 +1,10 @@
 var gulp    = require('gulp'),
     gutil   = require('gulp-util'),
-    clean   = require('gulp-clean'),
+    rimraf  = require('gulp-rimraf'),
     concat  = require('gulp-concat'),
     rename  = require('gulp-rename'),
     jshint  = require('gulp-jshint'),
-    ngmin   = require('gulp-ngmin'),
+    ngAnnotate = require('gulp-ng-annotate'),
     uglify  = require('gulp-uglify'),
     less    = require('gulp-less'),
     csso    = require('gulp-csso'),
@@ -19,7 +19,7 @@ var gulp    = require('gulp'),
 gulp.task('clean', function () {
     // Clear the destination folder
     gulp.src('app/**/*.*', { read: false })
-        .pipe(clean({ force: true }));
+        .pipe(rimraf({ force: true }));
 });
 
 
@@ -34,7 +34,7 @@ gulp.task('scripts', function () {
         // Concatenate, minify and copy all JavaScript (except vendor scripts)
         gulp.src(['src/js/**/*.js'])
             .pipe(concat('main.js'))
-            .pipe(ngmin({dynamic:true}))
+            .pipe(ngAnnotate())
             .pipe(uglify({mangle: false}))
             .pipe(gulp.dest('app/js'))
             .pipe(refresh(lr)),

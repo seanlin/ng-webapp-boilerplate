@@ -22,8 +22,7 @@
     "http": "^0.0.0",
     "jshint-stylish": "^0.2.0",
     "tiny-lr": "^0.0.7",
-    "gulp-changed": "^0.3.0",
-    "gulp-ngmin": "^0.3.0"
+    "gulp-changed": "^0.3.0"
   },
   "repository": {
     "type": "git",
@@ -36,6 +35,8 @@
   },
   "homepage": "https://github.com/seanlin/ng-webapp-boilerplate",
   "devDependencies": {
+    "gulp-ng-annotate": "^0.3.0",
+    "gulp-rimraf": "^0.1.0",
     "karma": "^0.12.16",
     "karma-chrome-launcher": "^0.1.3",
     "karma-jasmine": "^0.1.5",
