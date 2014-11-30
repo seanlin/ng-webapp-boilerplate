@@ -21,7 +21,11 @@
     "http": "^0.0.0",
     "jshint-stylish": "^0.2.0",
     "tiny-lr": "^0.0.7",
-    "vinyl-paths": "^1.0.0"
+    "vinyl-paths": "^1.0.0",
+    "karma": "^0.12.28",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.3.2",
+    "karma-junit-reporter": "^0.2.2"
   },
   "repository": {
     "type": "git",
@@ -38,11 +42,8 @@
     "gulp-ng-annotate": "^0.3.0",
     "gulp-strip-debug": "^1.0.2",
     "gulp-uglify": "^0.3.0",
-    "jasmine-core": "^2.1.2",
-    "karma": "^0.12.28",
-    "karma-chrome-launcher": "^0.1.5",
-    "karma-jasmine": "^0.3.2",
-    "karma-junit-reporter": "^0.2.2"
+    "jasmine-core": "^2.1.2"
+
   },
   "directories": {
     "test": "test"
