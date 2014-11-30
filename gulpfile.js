@@ -1,6 +1,8 @@
 var gulp    = require('gulp'),
     gutil   = require('gulp-util'),
-    rimraf  = require('gulp-rimraf'),
+    del     = require('del'),
+    stripDebug =  require('gulp-strip-debug'),
+    vinylPaths =  require('vinyl-paths'),
     concat  = require('gulp-concat'),
     rename  = require('gulp-rename'),
     jshint  = require('gulp-jshint'),
@@ -18,8 +20,9 @@ var gulp    = require('gulp'),
 
 gulp.task('clean', function () {
     // Clear the destination folder
-    gulp.src('app/**/*.*', { read: false })
-        .pipe(rimraf({ force: true }));
+    return gulp.src('app/**/*.*')
+      .pipe(vinylPaths(del));
+
 });
 
 
